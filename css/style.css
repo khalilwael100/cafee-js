@@ -1,0 +1,395 @@
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --color: #b9b9b9;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+
+html{
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+/* Start nav */
+.navbar{
+    width: 100%;
+    background: var(--bg);
+    border-bottom: var(--border);
+    position: fixed;
+    z-index: 1000;
+}
+nav .container-fluid a img{
+    width: 60px;
+}
+nav .container-fluid .navbar-toggler{
+    background: white;
+}
+
+.collapse{
+    margin: 0 auto;
+    overflow: hidden;
+}
+.collapse a{
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+}
+.collapse a:hover{
+    color: var(--main-color);
+}
+.collapse form i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+.collapse form i:hover{
+    color: var(--main-color);
+}
+
+
+/* Start cart container */
+.parent{
+    position: absolute;
+    display: flex;
+    justify-content:flex-end;
+    background: rgb(19 19 27 / .5);
+    width: 100%;
+    height: 87.7vh;
+    top:calc(100% + 2px); 
+    left: 0;
+    display: none;
+    transition: .5s;
+}
+.cart-container{
+    position: absolute;
+    height: 87.7vh;
+    top:calc(100% + 2px); 
+    right: -100%;
+    width: 340px;
+    background: #fff;
+    padding: 20px 10px;
+    transition: .5s;
+    z-index: 10;
+}
+.cart-container .closs{
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
+    transition: .5s;
+}
+.cart-container .closs:hover{
+    color: #e22525;
+}
+
+.cart-container .cart-item img{
+    height: 60px;
+}
+.cart-container .cart-item .content{
+    display: inline-block;
+}
+.cart-container .cart-item .content h4{
+    font-weight: bold;
+}
+.cart-container .cart-item .content .price{
+    color: var(--main-color);
+    margin-top: -10px;
+}
+.cart-container .cart-item .content{
+    position: relative;
+}
+.cart-container .cart-item .content i{
+    font-size: 20px;
+    position: absolute;
+    right: -80px;
+    top: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+.cart-container .cart-item .content i:hover{
+    color: var(--main-color);
+}
+/* End cart container */
+
+/* End nav */
+
+
+/* Sart head  */
+    .head{
+        height: 100vh;
+        background: url(../images/home-img.jpeg);
+        background-size: cover;
+        background-position: 0;
+    }
+    .head .title h1 pre{
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 30%;
+    }
+    .head .title p{
+        color: var(--color);
+        font-size: 20px;
+    }
+
+    @media(min-width: 768px) and (max-width: 991px){
+        .head .title h1 pre{
+            font-size: 35px;
+        }
+        .head .title p{
+            font-size: 16px;
+        }
+    }
+    @media(max-width: 767px){
+        .head .title{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .head .title h1 pre{
+            font-size: 26px;
+            margin-top: 80%;
+        }
+        .head .title p{
+            font-size: 12px;
+        }
+    }
+
+    .container .btn{
+        color: white;
+        background: var(--main-color);
+        transition: .4s;
+        font-weight: 500;
+    }
+    .container .btn:hover{
+        letter-spacing: 1.5px;
+    }
+    
+/* End head */
+
+
+/* Start about us */
+.title h2{
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-color);
+}
+.title h2 span{
+    color: white;
+}
+
+.about-us .container{
+    background: var(--black);
+}
+.about-us .container .body .right{
+    color: white;
+}
+.about-us .container .body .right h3{
+    font-weight: bold;
+}
+.about-us .container .body .right p{
+    color: var(--color);
+    font-weight: 400;
+}
+/* End about us */
+
+
+/* Sart our menu */
+.container .body .card{
+    background: var(--bg);
+    color: white;
+    border: var(--border);
+    transition: .4s;
+}
+.our-menu .container .body .card:hover{
+    background: white;
+    color: var(--bg);
+}
+.container .body .card img{
+    width: 100px;
+    margin: 0 auto;
+}
+
+.container .body .card h5{
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+.container .body .card .price{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.container .body .card .price span{
+    font-size: 12px;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+/* End our menu */
+
+
+
+/* Start our product */
+.our-product .body .card .icons a{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    font-size: 24px;
+    border: var(--border);
+    margin-left: 15px;
+    transition: .4s;
+}
+.our-product .body .card .icons a:hover{
+    background: var(--main-color);
+}
+
+.our-product .body .card img{
+    height: 260px;
+    width: 160px;
+}
+
+.our-product .body .card .stars i{
+    color: var(--main-color);
+}
+/* End our product */
+
+
+/* Sart reveiw */
+.reveiw .container .body .card img{
+    width: 60px;
+}
+.reveiw .container .body .card .pic{
+    width: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.reveiw .container .body .card p{
+    color: var(--color);
+}
+.reveiw .container .body .card h4{
+    font-weight: bold;
+}
+.reveiw .container .body .card .stars i{
+    color: var(--main-color);
+}
+/* End reveiw */
+
+
+/* Start contant */
+.contact .container{
+    background: var(--black);
+}
+.contact .container .body .input-group span{
+    background: var(--bg);
+    border: var(--border);
+    color: white;
+    font-size: 20px;
+}
+.contact .container .body .input-group input{
+    background: var(--bg);
+    border: var(--border);
+    color: white;
+    width: 100%;
+    border-left: none;
+    outline: none;
+    border-radius: 5px;
+}
+.contact .container .body .right h3{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+/* End contant */
+
+
+/* Start blogs */
+.blogs .row .card{
+    background: var(--bg);
+    color: white;
+    border: var(--border);
+    overflow: hidden;
+}
+.blogs .row .card .img{
+    overflow: hidden;
+}
+.blogs .row .card .img img{
+    height: 250px;
+    width: 100%;
+    transition: .5s;
+}
+.blogs .row .card:hover .img img{
+    transform: scale(1.2);
+}
+
+
+
+.blogs .row .card .content .title a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    transition: .4s;
+}
+.blogs .row .card .content .title a:hover{
+    color: var(--main-color);
+}
+.blogs .row .card .content span{
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+.blogs .row .card .content p{
+    color: var(--color);
+}
+/* End blogs */
+
+
+/* Start footer */
+footer{
+    background: var(--black);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .share a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50%;
+    border: var(--border);
+    transition: .4s;
+}
+footer .share a:hover{
+    background: var(--main-color);
+}
+
+footer .credit{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: lighter;
+}
+footer .credit span{
+    color: var(--main-color);
+}
+/* End footer */
